@@ -1,28 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+@import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: 'Albert Sans', Arial, Helvetica, sans-serif;
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px your-desired-color inset !important; /* This creates an inset box shadow that covers the default autofill background */
+  -webkit-text-fill-color: your-desired-text-color !important; /* Changes the text color of autofilled content */
+  background-color: your-desired-color !important; /* Fallback for browsers that don't fully support the box-shadow trick */
+  background-image: none !important; /* Removes any default background images applied by the browser */
+  transition: background-color 9999s ease-out, color 9999s ease-out; /* Prevents the color from transitioning back to the default */
+  transition-delay: 9999s; /* Delays the transition to effectively disable it */
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
 body {
-  background: rgb(6,40,61);
-  background: linear-gradient(0deg, rgba(6,40,61,1) 0%, rgba(37,109,133,1) 50%, rgba(71,181,255,1) 100%);
-  height: 97vh;
+  margin: 0;
 }
 
-h1, h2, h3, 
-h4, h5, h6,
-li {
-  margin: 20px;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-li {
-  background-color: antiquewhite;
-  border-radius: 50px;
-  padding: 10px;
-  list-style: none;
-  /*text-align: left;*/
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
